@@ -1,0 +1,93 @@
+:root {
+    --dark-color: 33, 33, 33;
+    --light-color: 255, 255, 255;
+}
+
+* {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 500 !important;
+}
+
+body {
+    background-color: rgba(var(--light-color), 1);
+}
+
+.comic-container {
+    border: 1px solid rgba(var(--dark-color), 0.12);
+    border-radius: 12px;
+    padding: 52px 46px;
+}
+
+.comic-container .title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(var(--dark-color), 1);
+    color: rgba(var(--dark-color), 1);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 800ms;
+}
+
+.comic-container .title.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.comic-container .wrapper-profile {
+    margin-top: 82px;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 800ms;
+}
+
+.comic-container .wrapper-profile.active {
+    transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.comic-container .profile {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+}
+
+.comic-container .comic-content {
+    padding-top: 32px;
+    margin-top: 42px;
+    border-top: 1px solid rgba(var(--dark-color), 0.12);
+}
+
+.comic-container .img-comic {
+    width: 100%;
+    opacity: 0;
+    transition: 1400ms;
+}
+
+.comic-container .img-comic.active {
+    opacity: 1;
+}
+
+.description {
+    color: rgba(var(--dark-color), 1);
+    line-height: 150%;
+}
+
+@media (max-width: 575.98px) {
+    .comic-container {
+        padding: 42px 32px;
+    }
+
+    .comic-container .title {
+        font-size: 2.5rem;
+    }
+
+    .comic-container .profile {
+        font-size: 1.125rem;
+    }
+
+    .comic-container .comic-content {
+        margin-top: 32px;
+    }
+}
